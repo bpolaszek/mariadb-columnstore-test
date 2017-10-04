@@ -1,0 +1,32 @@
+{
+    "require": {
+        "php": ">=7.1",
+        "bentools/cartesian-product": "^1.2",
+        "bentools/etl": "^2.5",
+        "bentools/simple-dbal": "^0.4.0",
+        "incenteev/composer-parameter-handler": "^2.1",
+        "symfony/var-dumper": "^3.3",
+        "symfony/yaml": "^3.3"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
+    },
+    "extra": {
+        "incenteev-parameters": {
+            "file": "parameters.yml"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "files" : [
+            "vendor/symfony/var-dumper/Resources/functions/dump.php"
+        ]
+    }
+}
